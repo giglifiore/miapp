@@ -1,4 +1,4 @@
-DEBUG = False
+DEBUG = True
 ALLOWED_HOSTS = ['*']  # o mejor: ['tu-app.onrender.com']
 
 STATIC_URL = '/static/'
