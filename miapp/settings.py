@@ -1,27 +1,5 @@
-from pathlib import Path
-
-BASE_DIR = Path(__file__).resolve().parent.parent
-
-SECRET_KEY = 'clave-secreta-fake-para-desarrollo'
-
-DEBUG = True
-
-ALLOWED_HOSTS = ['*']
-
-INSTALLED_APPS = [
-    'django.contrib.staticfiles',
-    'home',
-    'app',
-]
-
-MIDDLEWARE = [
-    'django.middleware.common.CommonMiddleware',
-]
-
-ROOT_URLCONF = 'miapp.urls'
-
-TEMPLATES = []
-
-WSGI_APPLICATION = 'miapp.wsgi.application'
+DEBUG = False
+ALLOWED_HOSTS = ['*']  # o mejor: ['tu-app.onrender.com']
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
