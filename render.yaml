@@ -2,10 +2,10 @@ services:
   - type: web
     name: miapp
     env: python
-    buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn miapp.miapp.wsgi:application
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn miapp.miapp.wsgi:application"
     envVars:
-      - key: DATABASE_URL
-        fromDatabase:
-          name: miapp
-          property: connectionString
+      - key: DJANGO_SETTINGS_MODULE
+        value: miapp.settings
+      - key: PYTHON_VERSION
+        value: 3.11
