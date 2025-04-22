@@ -1,1 +1,1 @@
-web: gunicorn miapp.miapp.wsgi:miapp
+web: gunicorn miapp.miapp.wsgi:application
